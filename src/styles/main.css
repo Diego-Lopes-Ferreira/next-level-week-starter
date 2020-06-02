@@ -24,3 +24,119 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
   font-family: 'Ubuntu', sans-serif;
 }
+<<<<<<< HEAD
+=======
+
+#page-home {
+  height: 100vh;
+  width: 100vw;
+  background: url('../assets/home-background.svg') no-repeat;
+  background-position: 25vw bottom;
+}
+#page-home .content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-home header {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#page-home header a {
+  display: flex;
+  color: var(--title-color);
+  font-weight: 700;
+}
+#page-home header a span {
+  margin-right: 2vw;
+  display: flex;
+  background-image: url('../assets/log-in.svg');
+  width: 24px;
+  height: 24px;
+}
+
+#page-home main {
+  max-width: 560px;
+  
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#page-home main h1 {
+  font-size: 54px;
+}
+
+#page-home main p {
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 24px;
+}
+
+#page-home main a {
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  background: var(--primary-color);
+  transition: 400ms;
+}
+#page-home main a:hover {
+  background-color: #2fb86e;
+}
+
+#page-home main a strong {
+  flex: 1;
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#page-home main a span {
+  width: 72px;
+  height: 72px;
+  background-color: #00000011;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-home main a span::after {
+  content: "";
+  background: url('../assets/search.svg');
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 900px) {
+  #page-home {
+    background-position-x: 70vh;
+  }
+  #page-home .content {
+    align-items: center;
+    text-align: center;
+  }
+  #page-home header a {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #page-home main {
+    align-items: center;
+  }
+}
+>>>>>>> 7ab98b2a30bce6775bea51c19ad5519e263c0b82
