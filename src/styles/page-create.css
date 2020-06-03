@@ -102,3 +102,44 @@ form button {
 form button:hover {
   background-color: #2fb86e;
 }
+
+.items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.item-grid li {
+  background-color: #E1FAEC;
+  list-style: none;
+  border: 2px solid #E1FAEC;
+  border-radius: 8px;
+  height: 180px;
+  padding: 32px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 500ms, border 500ms;
+}
+
+.item-grid li span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title-color);
+}
+.item-grid li span,
+.item-grid li img {
+  pointer-events: none;
+}
+
+.item-grid li.selected {
+  background: #e1faec;
+  border: 2px solid #34cb79;
+  background: linear-gradient(0deg, #E1FAEC 0%, #FFFFFF 100%);
+  border: 2px solid #34CB79;
+}

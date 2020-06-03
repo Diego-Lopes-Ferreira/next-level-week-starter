@@ -1,12 +1,11 @@
 async function fetchUfs() {
-  console.log('Buscando estados')
   const ufSelect = document.querySelector('.field #uf')
   const data = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
   const ufs = await data.json();
   for (let uf of ufs) {
     ufSelect.innerHTML += `<option value="${uf.id}">${uf.nome}</option>`;
   }
-  console.log('Estados concluido')
+  ufSelect.disabled = false
 }
 
 async function fetchCities(ufid) {
@@ -21,11 +20,25 @@ async function fetchCities(ufid) {
   citySelect.disabled = false
 }
 
-fetchUfs()
+async function handleFetchCities() {
+  const ufSelect = document.querySelector('.field #uf')
+  ufSelect.addEventListener('change', async () => {
+    await fetchCities(ufSelect[ufSelect.selectedIndex].value)
+  })
+}
 
-const ufSelect = document.querySelector('.field #uf')
-ufSelect.addEventListener('change', async () => {
-  console.log(`Buscando cidades do estado ${ufSelect[ufSelect.selectedIndex].text} com id ${ufSelect[ufSelect.selectedIndex].value}`)
-  await fetchCities(ufSelect[ufSelect.selectedIndex].value)
-  console.log('terminei')
-})
+function handleSelectItem(event) {
+  let itemId = event.target.dataset.id
+  event.target.classList.toggle('selected')
+}
+
+function main() {
+  fetchUfs()
+  handleFetchCities()  
+  const colectItems = document.querySelectorAll('.items-grid li');
+  for (let item of colectItems) {
+    item.addEventListener('click', handleSelectItem)
+  }
+}
+
+main()
