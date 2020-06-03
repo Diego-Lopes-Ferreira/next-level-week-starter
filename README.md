@@ -1,9 +1,9 @@
 # Next Level Week Starter
-## Projeto desenvolvido pela [rocketseat](https://rocketseat.com.br/) para ensinar programação.
+## Projeto desenvolvido pela [rocketseat](https://rocketseat.com.br/) para ensinar programação do nível básico a o avançado.
 ![NLW Classes](./Capa.png)
 
 ## Release History
-* 1.0.
+* 1.0.0
     * (~07/06/2020)
 
 ## Meta
