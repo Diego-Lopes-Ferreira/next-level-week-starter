@@ -27,17 +27,17 @@
 
             <div class="field">
               <label for="name">Nome da entidade</label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required>
             </div>
 
             <div class="field-group">
               <div class="field">
                 <label for="address-t">Endereço</label>
-                <input type="text" name="address-t" id="address-t">
+                <input type="text" name="address-t" id="address-t" required>
               </div>
               <div class="field">
                 <label for="address-n">Número</label>
-                <input type="text" name="address-n" id="address-n">
+                <input type="text" name="address-n" id="address-n" required>
               </div>
             </div>
             
@@ -45,13 +45,13 @@
               
               <div class="field">
                 <label for="uf">Estado</label>
-                <select name="uf" id="uf">
+                <select name="uf" id="uf" required>
                   <option value="">Selecione o estado</option>
                 </select>
               </div>
               <div class="field">
                 <label for="city">Cidade</label>
-                <select name="city" id="city" disabled>
+                <select name="city" id="city" disabled required>
                   <option value="">Selecione a cidade</option>
                 </select>
               </div>
@@ -59,16 +59,19 @@
             </div>
 
           </fieldset>
+
           <fieldset>
             <legend>
               <h2>Ítens de Coleta</h2>
               <p>Selecione um ou mais itens abaixo</p>
             </legend>
           </fieldset>
+
           <button type="submit">Cadastrar ponto de coleta</button>
+          
         </form>
       </div>
   </div>
-  
+  <script src="./scripts/create.js"></script>
 </body>
 </html>
