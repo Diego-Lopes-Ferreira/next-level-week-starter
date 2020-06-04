@@ -5,5 +5,14 @@
   "main": "src/server.js",
   "repository": "https://github.com/Diego-Lopes-Ferreira/next-level-week-starter.git",
   "author": "Diego-Lopes-Ferreira <diego.lopes.ferreira.br@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
