@@ -1,0 +1,9 @@
+{
+  "name": "nlw1",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido pela rocketseat para ensinar programação do nível básico a o avançado.",
+  "main": "src/server.js",
+  "repository": "https://github.com/Diego-Lopes-Ferreira/next-level-week-starter.git",
+  "author": "Diego-Lopes-Ferreira <diego.lopes.ferreira.br@gmail.com>",
+  "license": "MIT"
+}
