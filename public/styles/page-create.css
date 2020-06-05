@@ -7,18 +7,18 @@
   flex-direction: column;
 }
 
-#page-create header {
+header {
   margin-top: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#page-create header a {
+header a {
   display: flex;
   color: var(--title-color);
   font-weight: 700;
 }
-#page-create header a span {
+header a span {
   margin-right: 2vw;
   display: flex;
   background-image: url('../assets/arrow-left.svg');
@@ -46,9 +46,17 @@ form fieldset {
 
 form legend {
   margin-bottom: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 form legend h2 {
   font-size: 24px;
+}
+
+form .field-group {
+  display: flex;
 }
 
 form .field {
@@ -57,10 +65,19 @@ form .field {
   flex-direction: column;
   margin-bottom: 24px;
 }
-form .field-group {
-  display: flex;
-/*   flex-direction: column;
-  margin-bottom: 24px; */
+
+form #small.field {
+  flex: none;
+  width: 10vw;
+}
+
+form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+form label {
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 form input, form select {
@@ -75,15 +92,6 @@ form input, form select {
 form input:active, form select:active,
 form input:focus, form select:focus {
   background-color: #e0e0e5;
-}
-
-form label {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-form .field-group .field + .field {
-  margin-left: 24px;
 }
 
 form button {
