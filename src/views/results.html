@@ -1,75 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecoleta</title>
-  <link href="/styles/main.css" rel="stylesheet">
+{% block title %}
+  <title>Resultados da Pesquisa - Ecoleta</title>
+{% endblock %}
+{% block styles %}
   <link href="/styles/page-results.css" rel="stylesheet">
-  <link href="/styles/responsive.css" rel="stylesheet">
-</head>
+{% endblock %}
 
-<body>
-  <div id="page-results">
-    {% include "components/page-header.html" %}
+{% set pageId = "page-results" %}
 
-    <main>
-      <div class="header">
-        <h4>
-          <strong id="points">3 pontos</strong> encontrados
-        </h4>
+{% block content %}
+  {% include "./components/page-header.html" %}
+  <main>
+    <div class="header">
+      <h4>
+        <strong id="points">3 pontos</strong> encontrados
+      </h4>
+    </div>
+    <div class="cards">
+
+      <div class="card">
+        <img id="img"
+          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="Nome">
+        <h1 id="name">Nome</h1>
+        <h3 id="description">Descricao</h3>
+        <div class="address">
+          <p id="state">Estado cidade</p>
+          <p id="street">Rua</p>
+          <p id="number">numero</p>
+        </div>
       </div>
-      <div class="cards">
-        
-        <div class="card">
-          <img id="img" src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Nome">
-          <h1 id="name">Nome</h1>
-          <h3 id="description">Descricao</h3>
-          <div class="address">  
-            <p id="state">Estado cidade</p>
-            <p id="street">Rua</p>
-            <p id="number">numero</p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <img id="img" src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Nome">
-          <h1 id="name">Nome</h1>
-          <h3 id="description">Descricao</h3>
-          <div class="address">  
-            <p id="state">Estado cidade</p>
-            <p id="street">Rua</p>
-            <p id="number">numero</p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <img id="img" src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Nome">
-          <h1 id="name">Nome</h1>
-          <h3 id="description">Descricao</h3>
-          <div class="address">  
-            <p id="state">Estado cidade</p>
-            <p id="street">Rua</p>
-            <p id="number">numero</p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <img id="img" src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Nome">
-          <h1 id="name">Nome</h1>
-          <h3 id="description">Descricao</h3>
-          <div class="address">  
-            <p id="state">Estado cidade</p>
-            <p id="street">Rua</p>
-            <p id="number">numero</p>
-          </div>
-        </div>
 
+      <div class="card">
+        <img id="img"
+          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="Nome">
+        <h1 id="name">Nome</h1>
+        <h3 id="description">Descricao</h3>
+        <div class="address">
+          <p id="state">Estado cidade</p>
+          <p id="street">Rua</p>
+          <p id="number">numero</p>
+        </div>
       </div>
-    </main>
-    <div class="white"></div>
-  </div>
-</body>
 
-</html>
+      <div class="card">
+        <img id="img"
+          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="Nome">
+        <h1 id="name">Nome</h1>
+        <h3 id="description">Descricao</h3>
+        <div class="address">
+          <p id="state">Estado cidade</p>
+          <p id="street">Rua</p>
+          <p id="number">numero</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img id="img"
+          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="Nome">
+        <h1 id="name">Nome</h1>
+        <h3 id="description">Descricao</h3>
+        <div class="address">
+          <p id="state">Estado cidade</p>
+          <p id="street">Rua</p>
+          <p id="number">numero</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <div class="white"></div>
+{% endblock %}

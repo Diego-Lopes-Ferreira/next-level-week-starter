@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecoleta</title>
-  <link data-id=""nk href="/styles/main.css" rel="stylesheet">
-  <link data-id=""nk href="/styles/page-create.css" rel="stylesheet">
-  <link data-id=""nk href="/styles/responsive.css" rel="stylesheet">
-</head>
+{% block title %}
+  <title>Cadastre sua instituição - Ecoleta</title>
+{% endblock %}
+{% block styles %}
+  <link href="/styles/page-create.css" rel="stylesheet">
+{% endblock %}
 
-<body>
-  <div id="page-create">
-    {% include "components/page-header.html" %}
+{% set pageId = "page-create" %}
+
+{% block content %}
+  {% include "./components/page-header.html" %}
     <div class="form">
-      <form action="">
+      <form action="/">
         <h1>Cadastro de Ponto de Coleta</h1>
         <fieldset>
           <legend>
@@ -112,8 +110,7 @@
 
       </form>
     </div>
-  </div>
+{% endblock %}
+{% block scripts %}
   <script src="./scripts/create.js"></script>
-</body>
-
-</html>
+{% endblock %}
