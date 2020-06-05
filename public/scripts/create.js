@@ -24,10 +24,8 @@ function handleSelectItem(event) {
   let itemId = event.target.dataset.id
   event.target.classList.toggle('selected')
   if (selectedItems.includes(itemId)) {
-    console.log('true')
     selectedItems = selectedItems.filter( item => item != itemId)
   } else {
-    console.log('false')
     selectedItems.push(itemId)
   }
 }

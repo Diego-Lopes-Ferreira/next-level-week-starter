@@ -87,6 +87,8 @@ form input, form select {
   font-size: 16px;
   border-radius: 8px;
   transition: background-color 500ms;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 form input:active, form select:active,
@@ -109,6 +111,13 @@ form button {
 
 form button:hover {
   background-color: #2fb86e;
+}
+
+#page-create .center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .items-grid {

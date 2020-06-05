@@ -7,18 +7,18 @@
   flex-direction: column;
 }
 
-#page-results header {
+header {
   margin-top: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#page-results header a {
+header a {
   display: flex;
   color: var(--title-color);
   font-weight: 700;
 }
-#page-results header a span {
+header a span {
   margin-right: 2vw;
   display: flex;
   background-image: url('../assets/arrow-left.svg');
