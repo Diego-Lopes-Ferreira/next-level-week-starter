@@ -1,77 +1,42 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  <title>Resultados da Pesquisa - Ecoleta</title>
+<title>Resultados da Pesquisa - Ecoleta</title>
 {% endblock %}
 {% block styles %}
-  <link href="/styles/page-results.css" rel="stylesheet">
+<link href="/styles/page-results.css" rel="stylesheet">
 {% endblock %}
 
 {% set pageId = "page-results" %}
 
 {% block content %}
-  {% include "./components/page-header.html" %}
-  <main>
-    <div class="header">
-      <h4>
-        <strong id="points">3 pontos</strong> encontrados
-      </h4>
+{% include "./components/page-header.html" %}
+<main>
+  <div class="header">
+    <h4>
+      <strong id="points">{{ total }} pontos</strong> encontrados
+    </h4>
+  </div>
+
+  {% if total > 0 %}
+  <div class="cards">
+    {% for place in places %}
+    <div class="card">
+      <img id="img" src="{{ place.imageurl }}" alt="Nome">
+      <h1 id="name">{{ place.name }}</h1>
+      <h3 id="description">{{ place.items }}</h3>
+      <p id="state">{{ place.city }}, {{ place.state }}</p>
+      <p id="street">{{ place.address1 }}</p>
+      <p id="number">{{ place.address2 }}</p>
+      <div class="address">
+      </div>
     </div>
-    <div class="cards">
-
-      <div class="card">
-        <img id="img"
-          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          alt="Nome">
-        <h1 id="name">Nome</h1>
-        <h3 id="description">Descricao</h3>
-        <div class="address">
-          <p id="state">Estado cidade</p>
-          <p id="street">Rua</p>
-          <p id="number">numero</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img id="img"
-          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          alt="Nome">
-        <h1 id="name">Nome</h1>
-        <h3 id="description">Descricao</h3>
-        <div class="address">
-          <p id="state">Estado cidade</p>
-          <p id="street">Rua</p>
-          <p id="number">numero</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img id="img"
-          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          alt="Nome">
-        <h1 id="name">Nome</h1>
-        <h3 id="description">Descricao</h3>
-        <div class="address">
-          <p id="state">Estado cidade</p>
-          <p id="street">Rua</p>
-          <p id="number">numero</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img id="img"
-          src="https://images.unsplash.com/photo-1574387324389-2366ec67539c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          alt="Nome">
-        <h1 id="name">Nome</h1>
-        <h3 id="description">Descricao</h3>
-        <div class="address">
-          <p id="state">Estado cidade</p>
-          <p id="street">Rua</p>
-          <p id="number">numero</p>
-        </div>
-      </div>
-
-    </div>
-  </main>
-  <div class="white"></div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <h3>Nenhum local encontrado nessa localização</h3>
+  <img src="/assets/empty.svg" alt="">
+  {% endif %}
+</main>
+<div class="white"></div>
 {% endblock %}

@@ -41,7 +41,7 @@ main h4 {
 main .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* gap: 24px; */
+  gap: 24px;
 }
 
 main .card {
@@ -73,19 +73,22 @@ main .card h3 {
   font-size: 24px;
   line-height: 34px;
   color: var(--primary-color);
+  text-align: left;
 }
 
 main .card .address {
   margin-top: 24px;
 }
 
-main .card .address p {
+main .card p {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
   color: #6C6C80;
+  width: 100%;
+  text-align: left;
 }
 
 .white {
@@ -96,5 +99,14 @@ main .card .address p {
   height: 100%;
   right: 0;
   left: 0;
-  
+}
+
+#empty {
+  height: 100%;
+  width: 100%;
+  background: url('/assets/empty.svg') no-repeat;
+  background-position: 35vw bottom;
+}
+#empty h3 {
+  color: #322153;
 }

@@ -1,6 +1,8 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 
+const cursor = require('./database/db');
+
 
 const server = express();
 server.use(express.static('public'))
@@ -14,7 +16,13 @@ server.get('/create', (req, res) => {
   res.render('create.html')
 });
 server.get('/results', (req, res) => {
-  res.render('results.html')
+  cursor.all(`SELECT * FROM places`, function(err, rows) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('results.html', { places: rows, total: 0 })//rows.length })
+    }
+  })
 });
 
 server.listen('3000');
